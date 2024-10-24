@@ -15,21 +15,23 @@ class CategoryRepository implements RepositoriesInterface
         //
     }
     
-    public function index(): \Illuminate\Contracts\Pagination\LengthAwarePaginator
+    public function index() : \Illuminate\Contracts\Pagination\LengthAwarePaginator
     {
         return Category::paginate(10);
     }
     
-    public function getById($id): Category{
+    public function getById($id) : Category
+    {
         return Category::findOrFail($id);
     }
 
-    public function store(array $data): Category
+    public function store(array $data) : Category
     {
         return Category::create($data);
     }
 
-    public function update(array $data,$id): Category{
+    public function update(array $data,$id) : Category
+    {
         $Category = $this->getById($id);
         $Category->update($data);
         return $Category;
