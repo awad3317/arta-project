@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\region;
 use Illuminate\Http\Request;
 use app\Repositories\RegionRepository;
 
@@ -34,7 +33,7 @@ class RegionController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(region $region)
+    public function show($id)
     {
         //
     }
@@ -42,7 +41,7 @@ class RegionController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, region $region)
+    public function update(Request $request,$id)
     {
         //
     }
@@ -50,7 +49,7 @@ class RegionController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(region $region)
+    public function destroy($id)
     {
         //
     }
